@@ -2,13 +2,11 @@
 // Would also handle Routing...
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Helmet from 'react-helmet';
 import Styled from 'styled-components';
-import Anime from 'animejs';
 
 // Get Contexts...
 import ThemeProvider, { ThemeContext } from '../context/page-theme';
-import { GooContext, GooProvider } from '../context/gooContext';
+import { GooProvider } from '../context/gooContext';
 
 import GooContainer from '../components/goo-container';
 

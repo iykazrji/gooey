@@ -6,7 +6,7 @@ import ScrollMonitor from 'react-scrollmonitor';
 import { GooContext } from '../../context/gooContext';
 import { ThemeContext } from '../../context/page-theme';
 
-import featureImage from '../../resources/images/section-2-img.jpg';
+import featureImage from '../../resources/images/section-4-img.jpg';
 
 const SectionContainer = Styled.div`
     width: 100%;
@@ -70,19 +70,19 @@ const ImageWrapper = Styled.div`
 `;
 
 export default Watch(
-	class Section1 extends React.Component {
+	class Section4 extends React.Component {
 		render() {
 			let gooProperties = {
 				gooPath1:
-					'M74.3016755,488.874453 C-109,275 91.5,188.722238 221.5,188.722238 C351.5,188.722238 494.248313,-59.0181146 606.74542,14.5 C719.242528,88.0181146 621.14026,101.444476 1004.07013,188.722238 C1259.35671,246.907413 1314.66667,324.166667 1170,420.5 C1026.33333,559.833333 838.581807,569.666667 606.74542,450 C258.990841,270.5 837.5,1184 517.5,968.5 C197.5,753 257.603351,702.748906 74.3016755,488.874453 Z',
+					'M644,349.378222 C620.5,125.378222 26.9145669,150 26.9145669,64.3782217 C26.9145669,-21.2435566 223.298066,-21.2435566 447.899033,64.3782217 C672.5,150 766.5,243.5 870.5,331 C939.833333,389.333333 973.5,447 971.5,504 C973.5,541 886,573.5 709,601.5 C443.5,643.5 -37.5,299.5 2.5,258 C42.5,216.5 667.5,573.378222 644,349.378222 Z',
 				gooPath2:
-					'M73.7228316,417.009272 C-109.578844,203.134819 90.921156,116.857057 220.921156,116.857057 C350.921156,116.857057 461.502893,-55.0181146 574,18.5 C686.497107,92.0181146 553.07013,97.722238 936,185 C1191.28658,243.185175 1283.61991,320.521599 1213,417.009272 C1040.28077,510.759637 838.002963,497.801486 606.166577,378.134819 C258.411997,198.634819 814,1019.5 494,804 C174,588.5 257.024507,630.883725 73.7228316,417.009272 Z',
-				xCord: -10,
-				yCord: 200,
-				scale: 1.7
+					'M585,334 C561.5,110 57.1758537,129.838112 32.7612867,44.2163337 C8.3467198,-41.4054446 283.5,20 453.745753,44.2163337 C623.991505,68.4326674 758,150.338112 862,237.838112 C931.333333,296.171445 973.5,363.725408 988.5,440.5 C1012.5,596.833333 924,669.333333 723,658 C421.5,641 -70.3065604,326.676224 8.3467198,237.838112 C87,149 608.5,558 585,334 Z',
+				xCord: 300,
+				yCord: 160,
+				scale: 3
 			};
 			let themeProperties = {
-				backgroundColor: '#FDE100',
+				backgroundColor: '#FFFFFF',
 				foregroundColor: '#000000'
 			};
 
@@ -111,11 +111,11 @@ export default Watch(
 												<ImageWrapper featureImage={featureImage} />
 												<SectionTextContent>
 													<SectionHeader color={themeContext.state.foregroundColor}>
-														There's Coke in the Midas Touch.
+														Eledumare bless you with body oh baby oh.
 													</SectionHeader>
 													<SectionBody>
-														Step into your skin, I'd rather jump in your bones Taking up
-														your mouth so you'll breathe through your nose.
+														Cunning money Oyaa hold the fire Hold the gander Only money Only
+														money Only money .
 													</SectionBody>
 												</SectionTextContent>
 											</SectionWrapper>

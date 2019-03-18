@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
 
-// Pages....
-import Main from './pages/main';
+// Pages...
 import Document from './pages/document';
 const AppWrapper = styled.div`
 	background-color: #ffffff;

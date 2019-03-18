@@ -10,6 +10,8 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.5",
+    "react-scrollmonitor": "^0.1.0",
+    "react-tilt": "^0.1.4",
     "react-transition-group": "^2.6.1",
     "scrollmonitor-react": "^2.4.1",
     "styled-components": "^4.1.3"

@@ -1,6 +1,6 @@
 import React from 'react';
 import Styled from 'styled-components';
-import { GooContext, GooProvider } from '../../context/gooContext';
+import { GooContext } from '../../context/gooContext';
 import Anime from 'animejs';
 
 const GooContainer = Styled.div`
@@ -26,10 +26,6 @@ export default class GooContainerClass extends React.Component {
 }
 
 class GooWrapper extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	alternatePaths = (gooPath1, gooPath2) => {
 		console.log('Alternating paths');
 		Anime.remove('#gooPath');
@@ -88,12 +84,12 @@ class GooWrapper extends React.Component {
 							<svg
 								width="100%"
 								height="100%"
-								viewBox="0 0 1920 1080"
+								viewBox="0 0 2496 1404"
 								preserveAspectRatio="none"
 								id="gooContainer">
 								<path
 									d="M109.301676,611.874453 C81.3016755,428.874453 -150.698324,282.374453 160.801676,217.374453 C472.301676,152.374453 524.304568,-58.1436614 636.801676,15.3744532 C749.298783,88.8925678 800.338585,311.722238 1039.07013,311.722238 C1198.22449,311.722238 1308.80168,375.772976 1370.80168,503.874453 C1452.80168,715.874453 1381.46834,796.374453 1156.80168,745.374453 C819.801676,668.874453 904.301676,990.374453 584.301676,774.874453 C264.301676,559.374453 137.301676,794.874453 109.301676,611.874453 Z"
-									fill="rgba(20, 20, 20, 0.085)"
+									fill="rgba(20, 20, 20, 0.065)"
 									id="gooPath"
 								/>
 							</svg>

@@ -1,11 +1,13 @@
 import React from 'react';
 import Styled from 'styled-components';
-import { GooContext, GooProvider } from '../context/gooContext';
+import { GooContext } from '../context/gooContext';
 import { ThemeContext } from '../context/page-theme';
 
 //Get Page Sections
 import Section1 from '../components/scroll-example-page/section-1';
 import Section2 from '../components/scroll-example-page/section-2';
+import Section3 from '../components/scroll-example-page/section-3';
+import Section4 from '../components/scroll-example-page/section-4';
 
 const PageContainer = Styled.div`
     min-height: 110vh;
@@ -35,6 +37,15 @@ const ScrollExample = (props) => {
 			xCord: -70,
 			yCord: 100,
 			scale: 1.7
+		},
+		section3: {
+			gooPath1:
+				'M74.3016755,488.874453 C-109,275 91.5,188.722238 221.5,188.722238 C351.5,188.722238 494.248313,-59.0181146 606.74542,14.5 C719.242528,88.0181146 621.14026,101.444476 1004.07013,188.722238 C1259.35671,246.907413 1314.66667,324.166667 1170,420.5 C1026.33333,559.833333 838.581807,569.666667 606.74542,450 C258.990841,270.5 837.5,1184 517.5,968.5 C197.5,753 257.603351,702.748906 74.3016755,488.874453 Z',
+			gooPath2:
+				'M73.7228316,417.009272 C-109.578844,203.134819 90.921156,116.857057 220.921156,116.857057 C350.921156,116.857057 461.502893,-55.0181146 574,18.5 C686.497107,92.0181146 553.07013,97.722238 936,185 C1191.28658,243.185175 1283.61991,320.521599 1213,417.009272 C1040.28077,510.759637 838.002963,497.801486 606.166577,378.134819 C258.411997,198.634819 814,1019.5 494,804 C174,588.5 257.024507,630.883725 73.7228316,417.009272 Z',
+			xCord: 10,
+			yCord: -20,
+			scale: 1.7
 		}
 	};
 	let themeProperties = {
@@ -43,76 +54,20 @@ const ScrollExample = (props) => {
 			foregroundColor: '#FFFFFF'
 		},
 		section2: {
-			backgroundColor: '#E9CB4B',
-			foregroundColor: '#333333'
+			backgroundColor: '#FDE100',
+			foregroundColor: '#000000'
+		},
+		section3: {
+			backgroundColor: '#0A344D',
+			foregroundColor: '#FFFFFF'
 		}
 	};
 	return (
 		<PageContainer>
-			<ThemeContext.Consumer>
-				{(themeContext) => (
-					<GooContext.Consumer>
-						{(gooContext) => (
-							<React.Fragment>
-								<Section1
-									autoStart={true}
-									enterViewport={(watcher) => {
-										console.log('Section 1 is visible');
-										gooContext.updateGooProperties(
-											gooProperties.section1.gooPath1,
-											gooProperties.section1.gooPath2,
-											gooProperties.section1.xCord,
-											gooProperties.section1.yCord,
-											gooProperties.section1.scale
-										);
-										themeContext.updateForegroundColor(themeProperties.section1.foregroundColor);
-										themeContext.updateBackgroundColor(themeProperties.section1.backgroundColor);
-									}}
-									fullyEnterViewport={(watcher) => {
-										console.log('Section 1 is Fully visible');
-										gooContext.updateGooProperties(
-											gooProperties.section1.gooPath1,
-											gooProperties.section1.gooPath2,
-											gooProperties.section1.xCord,
-											gooProperties.section1.yCord,
-											gooProperties.section1.scale
-										);
-										themeContext.updateForegroundColor(themeProperties.section1.foregroundColor);
-										themeContext.updateBackgroundColor(themeProperties.section1.backgroundColor);
-									}}
-								/>
-								<Section2
-									xCord={gooContext.state.xCord}
-									enterViewport={(watcher) => {
-										console.log('Section 2 is visible');
-										gooContext.updateGooProperties(
-											gooProperties.section2.gooPath1,
-											gooProperties.section2.gooPath2,
-											gooProperties.section2.xCord,
-											gooProperties.section2.yCord,
-											gooProperties.section2.scale
-										);
-										themeContext.updateForegroundColor(themeProperties.section2.foregroundColor);
-										themeContext.updateBackgroundColor(themeProperties.section2.backgroundColor);
-									}}
-									fullyEnterViewport={(watcher) => {
-										console.log('Section 2 is Fully visible');
-										gooContext.updateGooProperties(
-											gooProperties.section2.gooPath1,
-											gooProperties.section2.gooPath2,
-											gooProperties.section2.xCord,
-											gooProperties.section2.yCord,
-											gooProperties.section2.scale
-										);
-										themeContext.updateForegroundColor(themeProperties.section2.foregroundColor);
-										themeContext.updateBackgroundColor(themeProperties.section2.backgroundColor);
-									}}
-								/>
-							</React.Fragment>
-						)}
-					</GooContext.Consumer>
-				)}
-			</ThemeContext.Consumer>
+			<Section1 />
+			<Section2 />
+			<Section3 />
+			<Section4 />
 		</PageContainer>
 	);
 };

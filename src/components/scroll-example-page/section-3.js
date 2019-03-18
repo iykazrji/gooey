@@ -6,7 +6,7 @@ import ScrollMonitor from 'react-scrollmonitor';
 import { GooContext } from '../../context/gooContext';
 import { ThemeContext } from '../../context/page-theme';
 
-import featureImage from '../../resources/images/section-2-img.jpg';
+import featureImage from '../../resources/images/section-3-img.jpg';
 
 const SectionContainer = Styled.div`
     width: 100%;
@@ -74,16 +74,16 @@ export default Watch(
 		render() {
 			let gooProperties = {
 				gooPath1:
-					'M74.3016755,488.874453 C-109,275 91.5,188.722238 221.5,188.722238 C351.5,188.722238 494.248313,-59.0181146 606.74542,14.5 C719.242528,88.0181146 621.14026,101.444476 1004.07013,188.722238 C1259.35671,246.907413 1314.66667,324.166667 1170,420.5 C1026.33333,559.833333 838.581807,569.666667 606.74542,450 C258.990841,270.5 837.5,1184 517.5,968.5 C197.5,753 257.603351,702.748906 74.3016755,488.874453 Z',
+					'M269,623 C-76,439.5 -29.5,169 84.5,95 C198.5,21 331.5,-74 448,95 C564.5,264 467.5,290.5 910,380 C1205,439.666667 1331.5,581.833333 1289.5,806.5 C1262.82723,909.166667 1183.16056,1006.5 1050.5,1098.5 C851.509159,1236.5 718,1350.5 471,1130.5 C224,910.5 614,806.5 269,623 Z',
 				gooPath2:
-					'M73.7228316,417.009272 C-109.578844,203.134819 90.921156,116.857057 220.921156,116.857057 C350.921156,116.857057 461.502893,-55.0181146 574,18.5 C686.497107,92.0181146 553.07013,97.722238 936,185 C1191.28658,243.185175 1283.61991,320.521599 1213,417.009272 C1040.28077,510.759637 838.002963,497.801486 606.166577,378.134819 C258.411997,198.634819 814,1019.5 494,804 C174,588.5 257.024507,630.883725 73.7228316,417.009272 Z',
-				xCord: -10,
-				yCord: 200,
-				scale: 1.7
+					'M278,511 C-67,327.5 -35.0854331,133.378222 78.9145669,59.3782217 C192.914567,-14.6217783 295,-44.5 411.5,124.5 C528,293.5 393.829134,212.256443 904.414567,344.378222 C1244.80486,432.459407 1360.65123,565.666667 1251.95369,744 C1208.97846,821 1121.16056,905.5 988.5,997.5 C789.509159,1135.5 621,1243 374,1023 C127,803 623,694.5 278,511 Z',
+				xCord: 150,
+				yCord: -150,
+				scale: 1.9
 			};
 			let themeProperties = {
-				backgroundColor: '#FDE100',
-				foregroundColor: '#000000'
+				backgroundColor: '#0A344D',
+				foregroundColor: '#FFFFFF'
 			};
 
 			return (
@@ -111,11 +111,12 @@ export default Watch(
 												<ImageWrapper featureImage={featureImage} />
 												<SectionTextContent>
 													<SectionHeader color={themeContext.state.foregroundColor}>
-														There's Coke in the Midas Touch.
+														I know I was supposed to call, I wasn't alone.
 													</SectionHeader>
 													<SectionBody>
-														Step into your skin, I'd rather jump in your bones Taking up
-														your mouth so you'll breathe through your nose.
+														Standing on a corner in the rainy, hot night Wonderin' if you
+														were at home My pockets full of someone else's cigarettes And I
+														don't even smoke (I don't even smoke) .
 													</SectionBody>
 												</SectionTextContent>
 											</SectionWrapper>
